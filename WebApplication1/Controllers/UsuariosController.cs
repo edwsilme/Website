@@ -19,6 +19,10 @@ namespace WebApplication1.Controllers
         {
             var tBL_USUARIO = db.TBL_USUARIO.Include(t => t.TBL_ROL);
             return View(tBL_USUARIO.ToList());
+
+
+
+
         }
 
         // GET: Usuarios/Details/5
