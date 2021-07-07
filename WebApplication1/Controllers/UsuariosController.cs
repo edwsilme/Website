@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using WebApplication1.Filters;
 
 namespace WebApplication1.Controllers
 {
@@ -40,6 +41,7 @@ namespace WebApplication1.Controllers
             return View(tBL_USUARIO);
         }
 
+        [AuthorizeUser(idRol: 1)]
         // GET: Usuarios/Create
         public ActionResult Create()
         {
@@ -65,6 +67,7 @@ namespace WebApplication1.Controllers
             return View(tBL_USUARIO);
         }
 
+        [AuthorizeUser(idRol: 1)]
         // GET: Usuarios/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -98,6 +101,7 @@ namespace WebApplication1.Controllers
             return View(tBL_USUARIO);
         }
 
+        [AuthorizeUser(idRol: 1)]
         // GET: Usuarios/Delete/5
         public ActionResult Delete(int? id)
         {
